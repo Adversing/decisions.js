@@ -81,3 +81,4 @@ Known issues:
   - If you don't add any rules to the `DecisionTree`, calling `decide()` will NOT result in an error. Similarly, if you don't call `decide()` after adding rules, you won't get an error as well. I might try to fix this issue as soon as possible.
 
 ---
+###### check out the java version [here](https://github.com/Adversing/Decisions4J/) :) 
