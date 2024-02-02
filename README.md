@@ -68,14 +68,14 @@ const person = { name: 'Alice', age: 30 };
 // Create a DecisionTree object and apply rules
 const decision = new DecisionTree(person)
   .caseCondition((p) => p.age > 18, () => console.log(`${person.name} is an adult`))
-  .defaultCase(() => console.log(`${person.name} is a minor`))
+  .setDefaultRule(() => console.log(`${person.name} is a minor`))
   .decide();
 ```
 
 ---
 
 ## Error handling & known issues
-`decisions.js` provides some basic error handling. If you call `defaultCase()` with a null action, you'll get an error.
+`decisions.js` provides some basic error handling. If you call `setDefaultRule()` with a null action, you'll get an error.
 
 Known issues:
   - If you don't add any rules to the `DecisionTree`, calling `decide()` will NOT result in an error. Similarly, if you don't call `decide()` after adding rules, you won't get an error as well. I might try to fix this issue as soon as possible.
